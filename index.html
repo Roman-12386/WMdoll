@@ -1,39 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WMdoll Official Store</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
-        .catalog { display: flex; gap: 20px; flex-wrap: wrap; }
-        .product { background: white; padding: 15px; border-radius: 10px; width: 250px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        img { width: 100%; border-radius: 8px; }
-        button { background: #28a745; color: white; border: none; padding: 10px 20px; margin-top: 10px; cursor: pointer; border-radius: 5px; font-size: 16px; }
-        button:hover { background: #218838; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f4f0;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.4rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+        }
+        .product {
+            background: #fff;
+            border-radius: 16px;
+            padding: 18px 15px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+        }
+        .product img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 12px;
+            background: #fafafa;
+            margin-bottom: 12px;
+        }
+        .product h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+        .product .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #27ae60;
+            margin: 6px 0 14px;
+        }
+        .product form button {
+            background: #27ae60;
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            width: 100%;
+            max-width: 200px;
+        }
+        .product form button:hover {
+            background: #1e8449;
+        }
+        .footnote {
+            text-align: center;
+            margin-top: 40px;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .catalog { grid-template-columns: 1fr; }
+        }
     </style>
-    <!-- Подключение Foxy (ваша корзина) -->
+    <!-- Подключение Foxy (корзина) -->
     <link href="https://cdn.foxycart.com/wmdollofficial/loader.css" rel="stylesheet">
     <script src="https://cdn.foxycart.com/wmdollofficial/loader.js" async defer></script>
 </head>
 <body>
+<div class="container">
+
     <h1>WMdoll Official Store</h1>
+    <p class="subtitle">Premium silicone companions</p >
+
     <div class="catalog">
+
+        <!-- ===== ТОВАР 1 ===== -->
         <div class="product">
-            <img src="https://imgtolinkx.com/delete/uGSkA5gsfJUqYiiA2f_pFhu2GWqPHdKc"
+            <!-- Ссылка на фото (взята из вашего последнего скриншота) -->
+            < img src="https://imgtolkienk.com/delete/uG5kA5gsfJQuYiIA2f_pFhu2GwqPHdKc" alt="Premium Silicone Girl S135">
             <h3>Premium Silicone Girl S135</h3>
-            <p><strong>$2500 USD</strong></p >
-            <!-- Форма добавления в корзину Foxy -->
+            <div class="price">$2 500 USD</div>
+
             <form action="https://wmdollofficial.foxycart.com/cart" method="post" target="_blank">
                 <input type="hidden" name="name" value="Premium Silicone Girl S135">
                 <input type="hidden" name="price" value="2500">
                 <input type="hidden" name="code" value="S35">
                 <input type="hidden" name="parent_code" value="Premium Silicone">
-                <!-- Ссылку на фото замените на реальную -->
-                <input type="hidden" name="image" value="https://imgtolinkx.com/delete/uGSkA5gsfJUqYiiA2f_pFhu2GWqPHdKc">
+                <!-- Та же ссылка на фото для корзины -->
+                <input type="hidden" name="image" value="https://imgtolkienk.com/delete/uG5kA5gsfJQuYiIA2f_pFhu2GwqPHdKc">
                 <button type="submit">Add to cart</button>
             </form>
         </div>
+
+        <!-- ===== ТОВАР 2 (добавьте по аналогии) ===== -->
+        <!-- 
+        <div class="product">
+            < img src="https://imgtolkienk.com/delete/ваша_ссылка_2" alt="Название товара 2">
+            <h3>Название товара 2</h3>
+            <div class="price">$3 200 USD</div>
+            <form action="https://wmdollofficial.foxycart.com/cart" method="post" target="_blank">
+                <input type="hidden" name="name" value="Название товара 2">
+                <input type="hidden" name="price" value="3200">
+                <input type="hidden" name="code" value="T002">
+                <input type="hidden" name="parent_code" value="Категория">
+                <input type="hidden" name="image" value="https://imgtolkienk.com/delete/ваша_ссылка_2">
+                <button type="submit">Add to cart</button>
+            </form>
+        </div>
+        -->
+
+    </div><!-- /catalog -->
+
+    <div class="footnote">
+        <p>Secure checkout powered by Foxy • Discreet shipping</p >
     </div>
+
+</div>
 </body>
 </html>
